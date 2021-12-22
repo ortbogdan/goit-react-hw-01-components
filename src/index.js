@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import user from './json/user.json';
+import data from './json/data.json';
 import { Profile } from './components/profile/Profile';
+import { Statistics } from './components/statistics/Statistics';
 
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Profile
-      username={user.username}
-      tag={user.tag}
-      location={user.location}
-      avatar={user.avatar}
-      stats={user.stats}
-    />
+    <>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics stats={data} />;
+    </>
   </React.StrictMode>,
   document.getElementById('root'),
 );
