@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import user from './json/user.json';
 import data from './json/data.json';
 import friends from './json/friends.json';
 import transactions from './json/transactions.json';
-import { Profile } from './components/profile/Profile';
-import { Statistics } from './components/statistics/Statistics';
-import { FriendList } from './components/friendList/FriendList';
-import { TransactionHistory } from './components/transaction-history/TransactionHistory';
+
+import {
+  Profile,
+  Statistics,
+  FriendList,
+  TransactionHistory,
+} from './components';
+
 import './index.css';
 
 ReactDOM.render(
