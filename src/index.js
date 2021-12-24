@@ -13,11 +13,12 @@ import {
   TransactionHistory,
 } from './components';
 
-import './index.css';
+import { Container } from './App.styled';
+// import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <>
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -28,7 +29,7 @@ ReactDOM.render(
       <Statistics stats={data} />;
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </>
+    </Container>
   </React.StrictMode>,
   document.getElementById('root'),
 );
