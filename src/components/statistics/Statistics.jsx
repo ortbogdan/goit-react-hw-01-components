@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { StatisticsContainer } from './Statistics.styled';
 
 export const Statistics = ({ stats }) => {
   return (
-    <section className="statistics">
+    <StatisticsContainer>
       <h2 className="title">Upload stats</h2>
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => {
@@ -14,7 +15,7 @@ export const Statistics = ({ stats }) => {
           );
         })}
       </ul>
-    </section>
+    </StatisticsContainer>
   );
 };
 
