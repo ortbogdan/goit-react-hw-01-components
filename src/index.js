@@ -26,7 +26,7 @@ ReactDOM.render(
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics stats={data} />
+      <Statistics stats={data} title={'Upload stats'} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </Container>

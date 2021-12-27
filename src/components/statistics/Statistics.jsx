@@ -1,17 +1,24 @@
 import PropTypes from 'prop-types';
-import { StatisticsContainer, Title, StatsList } from './Statistics.styled';
+import {
+  StatisticsContainer,
+  Title,
+  StatsList,
+  StatsListItem,
+  FileFormat,
+  Percentage,
+} from './Statistics.styled';
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <StatisticsContainer>
-      <Title>Upload stats</Title>
+      <Title>{title}</Title>
       <StatsList>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li className="item" key={id}>
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}</span>
-            </li>
+            <StatsListItem key={id} color={getRandomHexColor()}>
+              <FileFormat>{label}</FileFormat>
+              <Percentage>{percentage}</Percentage>
+            </StatsListItem>
           );
         })}
       </StatsList>
@@ -22,6 +29,11 @@ export const Statistics = ({ stats }) => {
 Statistics.propTypes = {
   stats: PropTypes.array.isRequired,
 };
+function getRandomHexColor() {
+  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+    Math.random() * 256,
+  )}, ${Math.floor(Math.random() * 256)})`;
+}
 // export const Statistics = ({ stats }) => {
 //   return (
 //     <section className="statistics">
