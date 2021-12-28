@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import user from './json/user.json';
-import data from './json/data.json';
-import friends from './json/friends.json';
-import transactions from './json/transactions.json';
+import user from './components/Profile/user.json';
+import data from './components/Statistics/data.json';
+import friends from './components/FriendList/friends.json';
+import transactions from './components/TransactionHistory/transactions.json';
 
 import {
   Profile,

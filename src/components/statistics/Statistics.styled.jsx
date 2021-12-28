@@ -9,7 +9,7 @@ export const StatisticsContainer = styled.section`
   height: 160px;
   margin-bottom: 60px;
   border-radius: 8px;
-
+  overflow: hidden;
   background-color: rgb(255, 255, 255);
 `;
 export const Title = styled.h2`

@@ -7,6 +7,7 @@ import {
   FileFormat,
   Percentage,
 } from './Statistics.styled';
+import { getRandomRgbColor } from './service/getRandomRgbColor';
 
 export const Statistics = ({ stats, title }) => {
   return (
@@ -15,7 +16,7 @@ export const Statistics = ({ stats, title }) => {
       <StatsList>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <StatsListItem key={id} color={getRandomHexColor()}>
+            <StatsListItem key={id} color={getRandomRgbColor()}>
               <FileFormat>{label}</FileFormat>
               <Percentage>{percentage}</Percentage>
             </StatsListItem>
@@ -29,20 +30,3 @@ export const Statistics = ({ stats, title }) => {
 Statistics.propTypes = {
   stats: PropTypes.array.isRequired,
 };
-function getRandomHexColor() {
-  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-    Math.random() * 256,
-  )}, ${Math.floor(Math.random() * 256)})`;
-}
-// export const Statistics = ({ stats }) => {
-//   return (
-//     <section className="statistics">
-//     <h2 className="title">Upload stats</h2>
-//     <ul className="stat-list">
-//       {stats.map(book => (
-//         <li key={book.id}>{book.name}</li>
-//       ))}
-//           </ul>
-//           </section>
-//   );
-// };
