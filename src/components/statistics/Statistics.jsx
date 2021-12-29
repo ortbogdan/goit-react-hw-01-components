@@ -7,7 +7,7 @@ import {
   FileFormat,
   Percentage,
 } from './Statistics.styled';
-import { getRandomRgbColor } from './service/GetRandomRgbColor';
+import { getRandomRgbColor } from './service/getRandomRgbColor';
 
 export const Statistics = ({ stats, title }) => {
   return (
