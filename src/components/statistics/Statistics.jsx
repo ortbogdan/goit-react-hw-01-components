@@ -7,12 +7,12 @@ import {
   FileFormat,
   Percentage,
 } from './Statistics.styled';
-import { getRandomRgbColor } from './service/getRandomRgbColor';
+import { getRandomRgbColor } from './service/GetRandomRgbColor';
 
 export const Statistics = ({ stats, title }) => {
   return (
     <StatisticsContainer>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       <StatsList>
         {stats.map(({ id, label, percentage }) => {
           return (
