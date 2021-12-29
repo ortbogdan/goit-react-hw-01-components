@@ -17,9 +17,7 @@ export const TransactionHistory = ({ items }) => {
         </tr>
       </thead>
       <tbody>
-        {items.map((item, index) => {
-          const { id, type, amount, currency } = item;
-          console.log(index);
+        {items.map(({ id, type, amount, currency }, index) => {
           return (
             <TableRow key={id} index={index}>
               <TypeItem>{type}</TypeItem>
